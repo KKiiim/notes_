@@ -1,0 +1,15 @@
+git clone --recursive https://github.com/WebAssembly/wabt
+cd wabt
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+
+
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh
+emcc --version
